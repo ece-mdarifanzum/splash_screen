@@ -13,16 +13,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  void initstate()
+  void initState()
   {
     super.initState();
     Future.delayed(Duration(
-      seconds: 3
+      seconds: 3,
     ),(){
       Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=> Home(),),);
     }
     );
   }
+  @override
+
   Widget build(BuildContext context) {
     return Center(
       child: FlutterLogo(
